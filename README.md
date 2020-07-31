@@ -1,5 +1,8 @@
 # NgStockmanagement
 
+ng-stockmanagement is the angular project.This project contains UI for the stockmanagement.This project utilizes the stockmanagement rest api for data manipulation and data insertion operations.
+
+## project creation
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
 ## Development server
