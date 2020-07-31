@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h2>Stock Details</h2>
+      <hr />
+      <div *ngIf="stockDetail">
+        <div>
+          <label><b>Stock Name: </b></label> {{stockDetail.stockName}}
+        </div>
+        <div>
+          <label><b>Stock Owner Name: </b></label> {{stockDetail.stockOwnerName}}
+        </div>
+        <div>
+          <label><b>Quantity: </b></label> {{stockDetail.quantity}}
+        </div>
+        <div>
+          <label><b>StockValue: </b></label> {{stockDetail.stockValue}}
+        </div>
+        <div>
+          <label><b>Remarks: </b></label> {{stockDetail.remarks}}
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <button (click)="list()" class="btn btn-primary">Back to Stock List</button><br>
+    </div>
+  </div>
+</div>

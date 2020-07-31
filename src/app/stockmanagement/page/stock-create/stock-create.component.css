@@ -1,0 +1,12 @@
+.container {
+    margin-top: 1%;
+}
+
+label {
+    margin-bottom: -0.5rem;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}

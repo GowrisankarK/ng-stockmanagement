@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+  <!-- <div class="panel-header-warp">
+  <div class="panel-heading">
+    <h2>Stock List</h2>
+  </div>
+  </div> -->
+  <div class="panel-body">
+    <div class="table-wrap">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>StockName</th>
+          <th>StockOwnerName</th>
+          <th>Quantity</th>
+          <th>StockValue</th>
+          <th>Remarks</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stockDetail of stockDetails | async">
+          <td>{{stockDetail.stockName}}</td>
+          <td>{{stockDetail.stockOwnerName}}</td>
+          <td>{{stockDetail.quantity}}</td>
+          <td>{{stockDetail.stockValue}}</td>
+          <td>{{stockDetail.remarks}}</td>
+          <td>
+            <button (click)="deleteStock(stockDetail.id)" class="btn btn-danger">Delete</button>
+            <button (click)="updateDetails(stockDetail.id)" class="btn btn-primary" style="margin-left: 10px">Update</button>
+            <button (click)="showStockDetails(stockDetail.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container">
+  <div *ngIf='error' class="alert alert-danger" role="alert">
+    Please enter all required fields
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div [hidden]="submitted" style="width: 400px;">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label class="required" for="name">Stock Name</label>
+            <input type="text" class="form-control" id="stockName" required [(ngModel)]="stock.stockName"
+              name="stockName">
+          </div>
+          <div class="form-group">
+            <label class="required" for="name">Stock Owner Id</label>
+            <input type="number" class="form-control" id="stockOwnerId" required [(ngModel)]="stock.stockOwnerId"
+              name="stockOwnerId">
+          </div>
+          <div class="form-group">
+            <label for="name">Stock Owner Name</label>
+            <input type="text" class="form-control" id="stockOwnerName" [(ngModel)]="stock.stockOwnerName"
+              name="stockOwnerName">
+          </div>
+          <div class="form-group">
+            <label class="required" for="name">Quantity</label>
+            <input type="number" class="form-control" id="quantity" required [(ngModel)]="stock.quantity" name="quantity">
+          </div>
+          <div class="form-group">
+            <label class="required" for="name">Stock Value</label>
+            <input type="number" class="form-control" id="stockValue" required [(ngModel)]="stock.stockValue"
+              name="stockValue">
+          </div>
+          <div class="form-group">
+            <label for="name">Stock Date</label>
+            <input type="date" class="form-control" id="stockValue" [(ngModel)]="stock.date" name="date">
+          </div>
+          <div class="form-group">
+            <label for="name">Remarks</label>
+            <input type="text" class="form-control" id="remarks" [(ngModel)]="stock.remarks" name="remarks">
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+
+      <div [hidden]="!submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newEmployee()">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
