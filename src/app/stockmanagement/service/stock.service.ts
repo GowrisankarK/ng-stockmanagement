@@ -24,6 +24,10 @@ createStockDetail(stockDetail: StockDetail) : Observable<StockDetail> {
   return this.httpClient.post<StockDetail>(this.baseUrl + "/insert/stocks", stockDetail);
 }
 
+createListOfStockDetail(stockDetailList: StockDetail[]) : Observable<StockDetail[]> {
+  return this.httpClient.post<StockDetail[]>(this.baseUrl + "/insert/listofstocks", stockDetailList);
+}
+
 updateStockDetail(stockDetail: StockDetail) : Observable<StockDetail> {
   return this.httpClient.put<StockDetail>(this.baseUrl + "/update/stocks", stockDetail);
 }

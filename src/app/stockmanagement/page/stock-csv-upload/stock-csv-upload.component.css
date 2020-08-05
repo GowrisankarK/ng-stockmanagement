@@ -1,0 +1,39 @@
+.table-wrap {
+    height: 80%;
+    overflow-y: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    width: 98%;
+}
+
+.alert {
+ margin-left: 1%; 
+ margin-right: 1%;
+ margin-top: 1%; 
+}
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 60px;
+    cursor: pointer;
+}
+
+.image-upload {
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.btn {
+    margin-left: 1%;
+    margin-top: 1%;
+}

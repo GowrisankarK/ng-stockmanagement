@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+  <div class="panel-body">
+    <button (click)="submitCsvListData()" [disabled] = "disabled" class="btn btn-primary">Insert Data</button>
+    <div title="File Upload" class="image-upload">
+      <label for="file-input">
+          <img src="../../../../assets/upload.png"/>
+      </label>
+      <input id="file-input"  accept=".csv" (change) ='fileUploadClick($event)' type="file"/>
+    </div>
+    <div *ngIf='success' class="alert alert-success">
+      Data Inserted successfully!
+    </div>
+    <div *ngIf='error' class="alert alert-danger" role="alert">
+      Please enter Valid Csv file
+    </div>
+    <div class="table-wrap">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Stock Name</th>
+          <th>Stock Owner Id</th> 
+          <th>Stock Owner Name</th>
+          <th>Quantity</th>
+          <th>Stock Value</th>
+          <th>Stock Date</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stockDetail of stockDetails">
+          <td>{{stockDetail.stockName}}</td>
+          <td>{{stockDetail.stockOwnerId}}</td>
+          <td>{{stockDetail.stockOwnerName}}</td>
+          <td>{{stockDetail.quantity}}</td>
+          <td>{{stockDetail.stockValue}}</td>
+          <td>{{stockDetail.date}}</td>
+          <td>{{stockDetail.remarks}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
