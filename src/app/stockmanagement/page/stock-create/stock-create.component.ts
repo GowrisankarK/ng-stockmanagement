@@ -15,6 +15,7 @@ export class StockCreateComponent implements OnInit {
   submitted: boolean = false;
   error: boolean = false;
   stockId: number;
+
   constructor(private stockService: StockService,
     private router: Router,
     private route: ActivatedRoute) { }

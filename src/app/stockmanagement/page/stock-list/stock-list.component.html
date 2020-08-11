@@ -5,10 +5,12 @@
   </div>
   </div> -->
   <div class="panel-body">
+    <button [disabled]="buttonDisabled" id='download' (click)="csvDownload($event)" class="btn btn-primary">Download</button>
     <div class="table-wrap">
     <table class="table table-bordered">
       <thead>
         <tr>
+          <th>Selection</th>
           <th>StockName</th>
           <th>StockOwnerName</th>
           <th>Quantity</th>
@@ -19,6 +21,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let stockDetail of stockDetails | async">
+          <td>
+            <input [disabled]="isDisabled" type='checkbox' (click)='checkboxSelection(stockDetail.id)'/>
+          </td>
           <td>{{stockDetail.stockName}}</td>
           <td>{{stockDetail.stockOwnerName}}</td>
           <td>{{stockDetail.quantity}}</td>
