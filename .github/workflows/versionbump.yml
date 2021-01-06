@@ -3,7 +3,7 @@ name: "Bump Version"
 on:
   push:
     branches:
-      - "master"
+      - "GowrisankarK-patch-2"
 
 jobs:
   bump-version:
