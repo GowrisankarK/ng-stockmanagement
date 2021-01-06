@@ -1,6 +1,6 @@
 {
   "name": "ng-stockmanagement",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
